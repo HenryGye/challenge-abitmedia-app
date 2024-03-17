@@ -125,3 +125,10 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
   - [DELETE] Eliminar Servicio
     `http://127.0.0.1:8000/api/servicios/1`
+
+- Apis adicionales (Requiere enviar Bearer token como Autorización en cada api)
+  - [GET] Listar Sistemas operativos
+    `http://127.0.0.1:8000/api/sistemas-operativos`
+
+  - [GET] Listar Licencias
+    `http://127.0.0.1:8000/api/licencias`
