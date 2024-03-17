@@ -11,7 +11,7 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 * Tener instalado Composer (Descargar https://getcomposer.org/Composer-Setup.exe)
 * Tener instalado Laravel en la versión >= 11.x (Una vez instalado Composer se puede ejecutar el comando `composer global require laravel/installer`)
 
-## instalacion
+## Instalación
 * Clonar el proyecto del repositorio https://github.com/HenryGye/challenge-abitmedia-app.git
 
 * Crear la base de datos `challenge_abitmedia_app`
@@ -22,12 +22,12 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
 * Crear archivo .env y configurar la BD (configuración por defecto generado al crear el proyecto Laravel)
 
-    DB_CONNECTION=mysql
+    ```DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=challenge_abitmedia_app
     DB_USERNAME=root
-    DB_PASSWORD=
+    DB_PASSWORD=```
 
 * Generar key
   - `php artisan key:generate`
@@ -37,3 +37,6 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
 * Ejecutar seeder
   - `php artisan db:seed`
+
+* Ejecutar proyecto
+  - `php artisan serve`
