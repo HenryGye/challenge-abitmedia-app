@@ -133,5 +133,11 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
   - [GET] Listar Licencias
     `http://127.0.0.1:8000/api/licencias`
 
-- Captura de ejemplos
+- Ejemplos usando Postman
+  - Crear token
+
     ![alt text](image.png)
+
+  - Listar Softwares
+
+    ![alt text](image-1.png)
