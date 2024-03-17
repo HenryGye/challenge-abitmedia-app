@@ -41,4 +41,49 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
   - `php artisan db:seed`
 
 * Ejecutar proyecto
-  - `php artisan serve`
+  - `php artisan serve` (Por defecto se ejecutará en http://127.0.0.1:8000)
+
+## Endpoints del proyecto
+
+- Apis creación/eliminación de token (no requiere enviar parámetros en header ni autorización)
+
+  - [POST] Generar token para protección de apis, usar el token devuelto como Bearer Token para autorización en cada una de las apis se softwares y servicio
+    `http://127.0.0.1:8000/api/tokens/create`
+  
+  - [POST] Eliminar tokens generados (en este punto si se consultar algún api de softwares o servicio devolverá 'UNAUTHORIZED', se deberá volver a generar nuevo token)
+    `http://127.0.0.1:8000/api/tokens/delete`
+
+- Apis de Softwares y Servicios (Requiere enviar Bearer token como Autorización en cada api)
+  - [GET] Listar Softwares
+    `http://127.0.0.1:8000/api/softwares`
+
+  - [POST] Crear Software
+    `http://127.0.0.1:8000/api/softwares`
+    Request 
+    ```
+    {
+        "sku": "SKU12345",
+        "nombre": "Software de Prueba",
+        "precio": 99.99,
+        "so_id": 1
+    }
+    ```
+
+  - [GET] Consultar Software por id
+    `http://127.0.0.1:8000/api/softwares/1`
+
+  - [PUT] Actualizar Software
+    `http://127.0.0.1:8000/api/softwares/1`
+    Request 
+    ```
+    {
+        "sku": "SKU12345",
+        "nombre": "Software de Prueba",
+        "precio": 99.99,
+        "so_id": 1
+    }
+    ```
+
+  - [DELETE] Eliminar Software
+    `http://127.0.0.1:8000/api/softwares/1`
+    
