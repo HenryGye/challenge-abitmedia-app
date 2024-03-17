@@ -48,9 +48,11 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 - Apis creación/eliminación de token (no requiere enviar parámetros en header ni autorización)
 
   - [POST] Generar token para protección de apis, usar el token devuelto como Bearer Token para autorización en cada una de las apis se softwares y servicio
+
     `http://127.0.0.1:8000/api/tokens/create`
   
   - [POST] Eliminar tokens generados (en este punto si se consultar algún api de softwares o servicio devolverá 'UNAUTHORIZED', se deberá volver a generar nuevo token)
+  
     `http://127.0.0.1:8000/api/tokens/delete`
 
 - Apis de Softwares y Servicios (Requiere enviar Bearer token como Autorización en cada api)
@@ -86,4 +88,3 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
   - [DELETE] Eliminar Software
     `http://127.0.0.1:8000/api/softwares/1`
-    
