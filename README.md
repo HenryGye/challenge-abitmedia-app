@@ -3,10 +3,10 @@
 
 ## Objetivo
 
-Gestionar oferta de productos mediante la implementación de una API REST en PHP con persistencia de datos
+Gestionar oferta de productos mediante la implementación de una API REST en PHP con persistencia de datos con operaciones CRUD.
 
 ## Requisitos
 
-* Tener instalado Composer (ver [text](https://getcomposer.org/Composer-Setup.exe))
+* Tener instalado Composer (Descargar (https://getcomposer.org/Composer-Setup.exe))
 * Tener instalado Laravel en la versión >= 11.x (Una vez instalado Composer se puede ejecutar el comando `composer global require laravel/installer`)
 
