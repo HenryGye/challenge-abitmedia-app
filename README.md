@@ -77,7 +77,7 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
   - [PUT] Actualizar Software
     `http://127.0.0.1:8000/api/softwares/1`
-    
+
     Request 
     ```
     {
@@ -90,3 +90,38 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
   - [DELETE] Eliminar Software
     `http://127.0.0.1:8000/api/softwares/1`
+
+
+
+  - [GET] Listar Servicios
+    `http://127.0.0.1:8000/api/servicios`
+
+  - [POST] Crear Servicio
+    `http://127.0.0.1:8000/api/servicios`
+
+    Request 
+    ```
+    {
+        "sku": "SKU12345",
+        "nombre": "Servicio de Prueba",
+        "precio": 99.99
+    }
+    ```
+
+  - [GET] Consultar Servicio por id
+    `http://127.0.0.1:8000/api/servicios/1`
+
+  - [PUT] Actualizar Servicio
+    `http://127.0.0.1:8000/api/servicios/1`
+    
+    Request 
+    ```
+    {
+        "sku": "SKU12345",
+        "nombre": "Servicio de Prueba",
+        "precio": 99.99
+    }
+    ```
+
+  - [DELETE] Eliminar Servicio
+    `http://127.0.0.1:8000/api/servicios/1`
