@@ -22,12 +22,14 @@ Gestionar oferta de productos mediante la implementación de una API REST en PHP
 
 * Crear archivo .env y configurar la BD (configuración por defecto generado al crear el proyecto Laravel)
 
-    ```DB_CONNECTION=mysql
+    ```
+    DB_CONNECTION=mysql
     DB_HOST=127.0.0.1
     DB_PORT=3306
     DB_DATABASE=challenge_abitmedia_app
     DB_USERNAME=root
-    DB_PASSWORD=```
+    DB_PASSWORD=
+    ```
 
 * Generar key
   - `php artisan key:generate`
