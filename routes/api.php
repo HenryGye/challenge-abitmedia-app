@@ -5,6 +5,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SoftwareController;
 use App\Http\Controllers\ServicioController;
 use App\Models\User;
+use App\Models\SistemaOperativo;
+use App\Models\Licencia;
 
 app('router')->aliasMiddleware('auth:sanctum', function ($request, $next) {
     if (!auth('sanctum')->check()) {
@@ -34,4 +36,19 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     });
     Route::resource('softwares', SoftwareController::class)->only(['index','store','show','update','destroy']);
     Route::resource('servicios', ServicioController::class)->only(['index','store','show','update','destroy']);
+
+    // apis adicionales
+    Route::get('sistemas-operativos', function (Request $request) {
+        $so = SistemaOperativo::all();
+        return $so ? response()->json($so, 200) : response()->json(['message' => 'UNAUTHORIZED'], 404);
+    });
+
+    Route::get('licencias', function (Request $request) {
+        $licencias = Licencia::all();
+        return $licencias ? response()->json($licencias, 200) : response()->json(['message' => 'UNAUTHORIZED'], 404);
+    });
+});
+
+Route::fallback(function () {
+    return response()->json(['message' => 'Not Found'], 404);
 });
