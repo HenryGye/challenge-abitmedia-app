@@ -40,12 +40,12 @@ Route::group(['middleware' => 'auth:sanctum'], function () {
     // apis adicionales
     Route::get('sistemas-operativos', function (Request $request) {
         $so = SistemaOperativo::all();
-        return $so ? response()->json($so, 200) : response()->json(['message' => 'UNAUTHORIZED'], 404);
+        return $so ? response()->json($so, 200) : response()->json(['message' => 'No hay registros'], 404);
     });
 
     Route::get('licencias', function (Request $request) {
         $licencias = Licencia::all();
-        return $licencias ? response()->json($licencias, 200) : response()->json(['message' => 'UNAUTHORIZED'], 404);
+        return $licencias ? response()->json($licencias, 200) : response()->json(['message' => 'No hay registros'], 404);
     });
 });
 
